@@ -1,0 +1,52 @@
+# Personal Data Guardian - 60-Second Demo Script
+
+## Setup (Pre-Demo)
+- Have Ganache running with deployed contract
+- Backend server running (show terminal)
+- Chrome extension loaded and dashboard open
+- Demo pages ready in browser tabs
+
+## Live Demo Script (60-90 seconds)
+
+**[0-15s] Problem Introduction**
+"Privacy is broken. Users share sensitive data without knowing what's collected or having proof of their consent decisions. Let me show you Personal Data Guardian - blockchain-based privacy transparency."
+
+**[15-30s] Extension Demo**
+"Here's a website requesting access to contacts, camera, and location data." 
+*[Open sensitive_demo.html]*
+"Our Chrome extension automatically detects these requests and shows a consent banner."
+*[Point to banner at top]*
+"I'll click Reject to deny access."
+*[Click Reject button]*
+
+**[30-45s] Blockchain Logging**
+"Notice the notification - this decision is now logged to Ethereum blockchain."
+*[Show notification popup]*
+"Here's our backend terminal showing the transaction being processed."
+*[Show backend terminal with transaction logs]*
+"Every privacy decision creates an immutable, timestamped record."
+
+**[45-60s] Dashboard & Proof**
+"Our dashboard shows all privacy decisions with blockchain proof."
+*[Switch to dashboard tab]*
+"Here's the decision we just made - with transaction hash, timestamp, and details hash."
+*[Point to new entry in table]*
+"Users can now prove what they consented to and when."
+
+**[60-75s] Value Proposition**
+"This gives users transparency and companies compliance proof. The blockchain makes privacy decisions auditable and tamper-proof."
+
+**[75-90s] Future Vision**
+"We're building the infrastructure for privacy transparency - where every data sharing decision is recorded, verifiable, and owned by the user."
+
+## Key Points to Emphasize
+- ✅ Real-time detection and consent
+- ✅ Blockchain immutability 
+- ✅ Privacy-preserving (only hashes on-chain)
+- ✅ User ownership of privacy decisions
+- ✅ Compliance ready for GDPR/CCPA
+
+## Demo Recovery
+If blockchain fails: "We also support offline mode with local storage for development environments."
+
+**Total Time: 60-90 seconds maximum**

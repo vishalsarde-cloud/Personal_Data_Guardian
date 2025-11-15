@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Content Demo - Personal Data Guardian</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
+            min-height: 100vh;
+            color: #2d3748;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2d3748;
+        }
+        
+        .safe-indicator {
+            background: linear-gradient(135deg, #d4edda, #c3e6cb);
+            color: #155724;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #28a745;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .article {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .article h2 {
+            color: #495057;
+            margin-bottom: 1rem;
+        }
+        
+        .article p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        
+        .newsletter-section {
+            background: #f1f3f4;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .newsletter-section h3 {
+            color: #495057;
+            margin-bottom: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group input {
+            width: 100%;
+            max-width: 300px;
+            padding: 0.75rem;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        
+        .subscribe-btn {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            margin-top: 1rem;
+        }
+        
+        .subscribe-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 10px rgba(40, 167, 69, 0.3);
+        }
+        
+        .safe-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e9ecef;
+        }
+        
+        .feature-card h4 {
+            color: #495057;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .testing-note {
+            background: #cff4fc;
+            border: 1px solid #b3e5fc;
+            color: #055160;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌿 Green Tech News</h1>
+            <p>Your source for sustainable technology and environmental innovation</p>
+        </div>
+        
+        <div class="safe-indicator">
+            <span>✅</span>
+            <strong>Safe Content:</strong> This page contains no sensitive data collection or privacy-invasive elements.
+        </div>
+        
+        <div class="article">
+            <h2>Revolutionary Solar Panel Technology Announced</h2>
+            <p>
+                Scientists at the University of Technology have developed a new type of solar panel that achieves 
+                45% efficiency in converting sunlight to electricity. This breakthrough could significantly reduce 
+                the cost of renewable energy and accelerate global adoption of sustainable power sources.
+            </p>
+            <p>
+                The new panels use a innovative multi-layer design that captures different wavelengths of light 
+                more effectively than traditional silicon-based panels. Manufacturing could begin as early as 
+                next year, with mass production expected by 2026.
+            </p>
+            <p>
+                Industry experts predict this technology could reduce solar installation costs by up to 30% 
+                while increasing power output. This development represents a major step forward in the fight 
+                against climate change and the transition to clean energy.
+            </p>
+        </div>
+        
+        <div class="safe-features">
+            <div class="feature-card">
+                <h4>🔋 Energy Storage</h4>
+                <p>Latest developments in battery technology and grid-scale energy storage solutions.</p>
+            </div>
+            <div class="feature-card">
+                <h4>🌱 Green Computing</h4>
+                <p>Sustainable data centers and energy-efficient computing innovations.</p>
+            </div>
+            <div class="feature-card">
+                <h4>♻️ Circular Economy</h4>
+                <p>Technology solutions for waste reduction and resource recycling.</p>
+            </div>
+            <div class="feature-card">
+                <h4>🚗 Electric Mobility</h4>
+                <p>Electric vehicles, charging infrastructure, and transportation innovation.</p>
+            </div>
+        </div>
+        
+        <div class="newsletter-section">
+            <h3>📧 Subscribe to Our Newsletter</h3>
+            <p>Stay updated with the latest green technology news and innovations.</p>
+            
+            <form>
+                <div class="form-group">
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="subscribe-btn">Subscribe to Newsletter</button>
+            </form>
+        </div>
+        
+        <div class="article">
+            <h2>Wind Energy Reaches New Milestone</h2>
+            <p>
+                Global wind energy capacity has surpassed 1,000 GW for the first time in history, 
+                representing a major achievement for renewable energy. This milestone was reached 
+                faster than experts predicted, demonstrating the rapid growth of sustainable power generation.
+            </p>
+            <p>
+                Offshore wind farms are leading this expansion, with several countries announcing 
+                ambitious projects that will significantly increase their renewable energy portfolio. 
+                Advanced turbine designs are now capable of generating more power even in low-wind conditions.
+            </p>
+        </div>
+        
+        <div class="testing-note">
+            <strong>🧪 Testing Note:</strong> This page contains only safe, non-sensitive content. The Personal Data Guardian extension should NOT show a consent banner on this page, as there are no sensitive keywords or privacy-invasive form fields present.
+        </div>
+    </div>
+    
+    <script>
+        console.log('Safe demo page loaded - no sensitive data collection');
+        
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Newsletter subscription submitted! (This is just a demo)');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensitive Data Demo - Personal Data Guardian</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #374151;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #fef3c7, #fbbf24);
+            color: #92400e;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #d97706;
+        }
+        
+        .permissions-section {
+            background: #fef2f2;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid #fecaca;
+        }
+        
+        .permissions-section h3 {
+            color: #dc2626;
+            margin-bottom: 1rem;
+        }
+        
+        .permission-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .permission-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #fecaca;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .permission-list li:before {
+            content: "⚠️";
+            font-size: 1.2em;
+        }
+        
+        .form-section {
+            background: #f9fafb;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .info-section {
+            background: #eff6ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 1px solid #dbeafe;
+        }
+        
+        .info-section h3 {
+            color: #1d4ed8;
+            margin-bottom: 1rem;
+        }
+        
+        .testing-note {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            color: #166534;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔒 Sensitive Data Collection Site</h1>
+            <p>This demo page contains sensitive keywords and form fields that should trigger the Data Guardian extension.</p>
+        </div>
+        
+        <div class="warning-box">
+            <strong>⚠️ Privacy Notice:</strong> This site wants to access your personal information including contacts, location, and camera. Please review our privacy policy before proceeding.
+        </div>
+        
+        <div class="permissions-section">
+            <h3>Required Permissions</h3>
+            <ul class="permission-list">
+                <li>Access to your <strong>contacts</strong> and address book</li>
+                <li>Access to your device <strong>camera</strong> for photo verification</li>
+                <li>Access to your <strong>geolocation</strong> for location services</li>
+                <li>Permission to access your <strong>phone</strong> number</li>
+                <li>Access to social security and <strong>ID</strong> information</li>
+            </ul>
+        </div>
+        
+        <div class="form-section">
+            <h2>Personal Information Form</h2>
+            <p>Please fill out the following form to access our premium services:</p>
+            
+            <form>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </div>
+                
+                <div class="form-group">
+                    <label for="contacts">Emergency Contact:</label>
+                    <input type="text" id="contacts" name="contacts" placeholder="Enter emergency contact information">
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Current Location:</label>
+                    <input type="text" id="location" name="location" placeholder="Enter your current address/location">
+                </div>
+                
+                <div class="form-group">
+                    <label for="ssn">Social Security Number:</label>
+                    <input type="text" id="ssn" name="ssn" placeholder="Enter your SSN for verification">
+                </div>
+                
+                <div class="form-group">
+                    <label for="passport">Passport/ID Number:</label>
+                    <input type="text" id="passport" name="passport" placeholder="Enter your passport or ID number">
+                </div>
+                
+                <div class="form-group">
+                    <label for="personal">Personal Details:</label>
+                    <textarea id="personal" name="personal" rows="4" placeholder="Enter any additional personal information..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Personal Information</button>
+            </form>
+        </div>
+        
+        <div class="info-section">
+            <h3>📍 Location Services</h3>
+            <p>This website uses geolocation services to provide personalized content based on your location. We may also access your camera for identity verification purposes.</p>
+        </div>
+        
+        <div class="testing-note">
+            <strong>🧪 Testing Note:</strong> This is a demo page designed to test the Personal Data Guardian extension. The keywords and form fields on this page should trigger the consent banner if the extension is properly installed and running.
+        </div>
+    </div>
+    
+    <script>
+        // Demo JavaScript that mentions sensitive data
+        console.log('Demo page loaded - requesting access to contacts, camera, and location');
+        
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('This is a demo form - no actual data is collected!');
+        });
+        
+        // Simulate requesting permissions (for demo purposes)
+        setTimeout(() => {
+            console.log('Simulating permission requests for camera, contacts, and geolocation');
+        }, 2000);
+    </script>
+</body>
+</html>

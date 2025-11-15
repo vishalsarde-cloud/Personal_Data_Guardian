@@ -1,0 +1,33 @@
+## Personal Data Guardian - 3-Slide Pitch
+
+### Slide 1: The Problem 🚨
+• **Privacy Crisis**: Users unknowingly share sensitive data with websites
+• **Lack of Transparency**: No clear record of privacy decisions and data sharing
+• **Trust Issues**: Users can't verify what data companies actually collect
+• **Regulatory Gap**: Need immutable proof of consent for compliance (GDPR, CCPA)
+
+### Slide 2: Our Solution 🛡️
+• **Chrome Extension**: Automatically detects sensitive data requests and shows consent banners
+• **Blockchain Logging**: Immutable record of privacy decisions on Ethereum
+• **Privacy-Preserving**: Only stores hashed details on-chain, full data stays local
+• **Real-Time Dashboard**: Users can view all their privacy decisions and blockchain transactions
+• **Open Source**: Transparent, auditable privacy protection system
+
+### Slide 3: Demo & Future Scope 🚀
+
+**Live Demo Flow:**
+1. Visit sensitive website → Extension detects keywords → Shows consent banner
+2. User decides Approve/Reject → Decision logged to blockchain → Dashboard updates
+3. Immutable proof of consent with transaction hash and timestamp
+
+**Future Roadmap:**
+• **AI-Powered Detection**: Advanced ML models for better PII recognition
+• **Multi-Chain Support**: Polygon, Arbitrum for lower gas costs
+• **Browser Integrations**: Firefox, Safari, Edge extensions
+• **Enterprise Solution**: Corporate privacy compliance dashboard
+• **Monetization**: Premium features, whitelabel solutions, compliance reporting
+
+**Market Opportunity:** $200B privacy tech market growing 25% annually
+
+---
+*Built in 12 hours for maximum privacy transparency! 🛡️*

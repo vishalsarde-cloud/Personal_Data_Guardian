@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Personal Data Guardian",
+  "version": "1.0.0",
+  "description": "Blockchain-based privacy consent management for sensitive data requests",
+  
+  "permissions": [
+    "activeTab",
+    "storage",
+    "notifications"
+  ],
+  
+  "host_permissions": [
+    "http://localhost:5000/*",
+    "<all_urls>"
+  ],
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Personal Data Guardian"
+  }
+}

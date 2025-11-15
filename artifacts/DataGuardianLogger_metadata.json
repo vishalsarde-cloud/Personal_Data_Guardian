@@ -1,0 +1,291 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "dataType",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "decision",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "detailsHash",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "DataLogged",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "getLog",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "user",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "dataType",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "decision",
+								"type": "bool"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "detailsHash",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "uint256",
+								"name": "timestamp",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct DataGuardianLogger.Log",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getLogsCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getUserLogs",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "user",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "dataType",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "decision",
+								"type": "bool"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "detailsHash",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "uint256",
+								"name": "timestamp",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct DataGuardianLogger.Log[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "dataType",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "decision",
+						"type": "bool"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "detailsHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "logData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "logs",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "dataType",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "decision",
+						"type": "bool"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "detailsHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Smart contract for logging privacy decisions on-chain Stores hashed details to protect user privacy while maintaining transparency",
+			"kind": "dev",
+			"methods": {
+				"getLog(uint256)": {
+					"details": "Get a specific log by index",
+					"params": {
+						"index": "Index of the log to retrieve"
+					},
+					"returns": {
+						"_0": "Log struct containing all privacy decision details"
+					}
+				},
+				"getLogsCount()": {
+					"details": "Get total number of logs",
+					"returns": {
+						"_0": "Total count of privacy logs"
+					}
+				},
+				"getUserLogs(address)": {
+					"details": "Get all logs for a specific user",
+					"params": {
+						"user": "User's address to filter logs"
+					},
+					"returns": {
+						"_0": "Array of logs for the specified user"
+					}
+				},
+				"logData(address,string,bool,bytes32)": {
+					"details": "Log a new privacy decision",
+					"params": {
+						"dataType": "Type of sensitive data detected",
+						"decision": "User's approval/rejection decision",
+						"detailsHash": "SHA-256 hash of the details (privacy-preserving)",
+						"user": "User's address making the decision"
+					}
+				}
+			},
+			"title": "DataGuardianLogger",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contract/DataGuardianLogger.sol": "DataGuardianLogger"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contract/DataGuardianLogger.sol": {
+			"keccak256": "0xe0bfd6911d2a58c59e8cd21128bf25c51d108111c6ec1438d47707c9d1416444",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://99dbd29c39252795415cde279b1edcb7be98a85215ff130ef4dc70ae30ad6af3",
+				"dweb:/ipfs/QmZJTaSCSW9njJ5dopE4tgZw6ar92qnFCEJ2VEy5nLccgc"
+			]
+		}
+	},
+	"version": 1
+}
