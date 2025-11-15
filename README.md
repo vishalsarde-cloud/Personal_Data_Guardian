@@ -1,3 +1,4 @@
+# Personal Data Guardian
 
 A blockchain-based privacy consent management system that detects sensitive data requests and logs user decisions on Ethereum.
 
